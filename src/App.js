@@ -1,17 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import MyInfo from './components/MyInfo';
+import './style.css';
+import Header from "./components/Header"
+import MainContent from "./components/MainContent"
+import Footer from "./components/Footer"
+import Greeting from './components/Greeting';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <MyInfo/>
-      </header>
-    </div>
-  );
+// const App = () => (
+//   <div>
+//     <Header />
+//     <MainContent />
+//     <Footer />
+//   </div>
+// )
+
+class App extends React.Component {
+  render = () =>
+    (
+      <div>
+        <Header username="Shane" />
+        <Greeting />
+        <MainContent />
+        <Footer />
+      </div>
+    )
 }
 
 export default App;
